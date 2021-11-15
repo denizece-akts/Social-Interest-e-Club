@@ -1,0 +1,24 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+  port: 8081
+
+spring:
+  datasource:
+    password: "123456"
+    url: jdbc:postgresql://localhost:5432/registration
+    username: "postgres"
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  session:
+    jdbc:
+      initialize-schema: always
+    timeout: 600
+
